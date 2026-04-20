@@ -142,7 +142,35 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
     vector<vector<int>>& parent_c, int exit_r, int exit_c) {
     // Your code here
 
+    //Mark current cell as visited
+    visited[r][c] = true;
 
+    //Print the element at the cell
+    cout << maze[r][c] << " ";
+
+    //Traverse valid adjacent cells
+
+    for (int i = 0; i < 4; i++) {
+        int x = r + dr[i];
+        int y = c + dc[i];
+
+        //Check if x and y isx valid index
+        if (isValid(visited, x, y, maze)) {
+            dfs(x, y, maze, visited, parent_r, parent_c, exit_r, exit_c);
+        }
+    }
+
+    //old
+    // if (maze[r][c] == maze[exit_r][exit_c]) {
+    //     return true;
+    // }
+
+    if (r == exit_r && c == exit_c) {
+        cout << "E found ";
+        return true;
+    }
+
+    return false;
 
 }
 
@@ -184,7 +212,10 @@ int main() {
     // STUDENT WORK:
     // Call your DFS, track visited, and fill parent_r and parent_c
     // ------------------------------------------------------
-    // bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
+     bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
+    cout << endl;
+    //incorrectly printing false when true
+    cout << found << endl;
 
     // ------------------------------------------------------
     // STUDENT WORK:
