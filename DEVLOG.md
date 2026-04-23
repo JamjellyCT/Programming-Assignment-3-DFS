@@ -55,3 +55,20 @@ Fixed the recursion within dfs function. dfs didn't return anything so I return 
 that only made dfs search one path before returning. Fixed the recursion to return proper value
 by making another if statement within if valid and making dfs the condition, so that if dfs is true meaning
 exit found it would return true.
+
+### Session 5
+**Date:** 2026-04-22
+**Task worked on:**
+testing dfs  and logic
+**Bugs or Issues**
+No issues from the dfs and logic that I found
+Creating a maze with input 1 1 causes program to run indefinitely
+**Tests**
+Tested different maze sizes, 2 2, 3 3, 4 4, 5 5, 6 6, etc. 
+All worked as intended.
+If no path found, no path found message displayed, if path found, 
+path from entrancee to exit is displayed
+**Fixed or Improved**
+No improvements rather I proved logic and dfs implementation sound.
+
+
