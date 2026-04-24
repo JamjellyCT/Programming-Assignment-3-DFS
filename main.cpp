@@ -194,6 +194,12 @@ int main() {
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
 
+    if (N == 1 && M == 1) {
+        cout << "1 1 is an invalid input"<< endl;
+        cout << "Enter maze dimensions N M: ";
+        cin >> N >> M;
+    }
+
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
 

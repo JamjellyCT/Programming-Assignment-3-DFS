@@ -72,3 +72,19 @@ path from entrancee to exit is displayed
 No improvements rather I proved logic and dfs implementation sound.
 
 
+### Session 6
+**Date:** 2026-04-23
+**Task worked on:**
+Made 1 1, an invalid input because S and E cannot be at the same spot.
+This makes an infinite loop as they keep replacing eachother.
+**Bugs or Issues**
+Other input   take a long time  because E and S I think are trying to occupy the same spot
+Inputs such as 1 2 and 2 1 take a long time because E and S keep trying to occupy the same spot.
+Sometimes it works and sometimes it doesn't.
+**Tests**
+Tested different maze sizes that aren't square such as 2 3, 3 2, 4 2, etc.
+**Fixed or Improved**
+Program now rejects 1 1 as a valid input as this input causes an infinite loop.
+
+
+
