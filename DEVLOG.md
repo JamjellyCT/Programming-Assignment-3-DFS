@@ -86,5 +86,17 @@ Tested different maze sizes that aren't square such as 2 3, 3 2, 4 2, etc.
 **Fixed or Improved**
 Program now rejects 1 1 as a valid input as this input causes an infinite loop.
 
-
+### Session 7
+**Date:** 2026-04-24
+**Task worked on:**
+Created a loop that asks the user for inputs until a valid one is inputted.
+Inputs such as 1 1 or inputs with 0 are invalid.
+Still need to implement making ints valid inputs. No strings allowed.
+**Bugs or Issues**
+Inputting a string causes an infinite loop.
+**Tests**
+Tried inputs such as 1 1, 0 2, 2 0, all loop and prompt the user to input another value.
+**Fixed or Improved**
+Before the check for inputs 1 1 only did it once so if the user inputted 1 1 again the infinite loop would occur.
+Put the check into a while loop so that if an invalid input was inputted it would prompt the user to input again.
 

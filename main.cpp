@@ -190,15 +190,45 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
 // ----------------------------------------------------------
 int main() {
     int N, M;
+    bool valid = false;
 
-    cout << "Enter maze dimensions N M: ";
-    cin >> N >> M;
 
-    if (N == 1 && M == 1) {
-        cout << "1 1 is an invalid input"<< endl;
+    //inputs like 2 1 and 1 2 cause problems still
+    //won't make them illegal as technically they still work.
+    while (!valid) {
         cout << "Enter maze dimensions N M: ";
         cin >> N >> M;
+
+        if (N == 1 && M == 1) {
+            cout << "1 1 is an invalid input"<< endl;
+            continue;
+        }
+        else if (N == 0 || M == 0) {
+            cout << "0 is an invalid input"<< endl;
+            continue;
+        }
+        else {
+            valid = true;
+
+        }
+
+        //valid = true;
     }
+
+
+    //Edge case input 1 1
+    // if (N == 1 && M == 1) {
+    //     cout << "1 1 is an invalid input"<< endl;
+    //     cout << "Enter maze dimensions N M: ";
+    //     cin >> N >> M;
+    // }
+
+    //Edge case M or N equal 0
+    // if (N == 0 || M == 0) {
+    //     cout << "0 is an invalid input"<< endl;
+    //     cout << "Enter maze dimensions N M: ";
+    //     cin >> N >> M;
+    // }
 
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
