@@ -192,28 +192,38 @@ int main() {
     int N, M;
     bool valid = false;
 
-
     //inputs like 2 1 and 1 2 cause problems still
     //won't make them illegal as technically they still work.
-    while (!valid) {
-        cout << "Enter maze dimensions N M: ";
-        cin >> N >> M;
+    cout << "Enter maze dimensions N M: ";
 
-        if (N == 1 && M == 1) {
-            cout << "1 1 is an invalid input"<< endl;
-            continue;
-        }
-        else if (N == 0 || M == 0) {
-            cout << "0 is an invalid input"<< endl;
-            continue;
-        }
-        else {
-            valid = true;
+    while (!(cin >> N >> M)) {
+        cout << "Not an Int, please enter int: ";
 
-        }
+        cin.clear();
 
-        //valid = true;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
+
+    //
+    // while (!valid) {
+    //     cout << "Enter maze dimensions N M: ";
+    //     cin >> N >> M;
+    //
+    //     if (N == 1 && M == 1) {
+    //         cout << "1 1 is an invalid input"<< endl;
+    //         continue;
+    //     }
+    //     else if (N == 0 || M == 0) {
+    //         cout << "0 is an invalid input"<< endl;
+    //         continue;
+    //     }
+    //     else {
+    //         valid = true;
+    //
+    //     }
+    //
+    //     //valid = true;
+    // }
 
 
     //Edge case input 1 1

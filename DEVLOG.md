@@ -100,3 +100,20 @@ Tried inputs such as 1 1, 0 2, 2 0, all loop and prompt the user to input anothe
 Before the check for inputs 1 1 only did it once so if the user inputted 1 1 again the infinite loop would occur.
 Put the check into a while loop so that if an invalid input was inputted it would prompt the user to input again.
 
+
+### Session 8
+**Date:** 2026-04-26
+**Task worked on:**
+Worked on making input letters invalid. 
+**Bugs or Issues**
+For current validation checker inputs like e created an infinite loop.
+Current implementation is either letter causes error, or inputs like 1 1 creates an error.
+Inputs like 3 3e pass. I think cause the way cin works it takes in the inputs like a stream
+so it goes in the order of the input so it doesn't reach e. I'll leave it as it doesn't really cause any issues.
+**Tests**
+Inputs tested like e e, e, 3 e, e 3, 3 3e, 3 3e3, etc. 
+**Fixed or Improved**
+Now doesn't cause an error when user inputs an letter but the 
+validation are still seperate so I need to combine them still.
+
+
