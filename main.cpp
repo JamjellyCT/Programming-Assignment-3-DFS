@@ -196,13 +196,38 @@ int main() {
     //won't make them illegal as technically they still work.
     cout << "Enter maze dimensions N M: ";
 
-    while (!(cin >> N >> M)) {
-        cout << "Not an Int, please enter int: ";
+    while (!valid) {
+        if (!(cin >> N >> M)) {
+            cout << "Not an Int, please enter int: ";
 
-        cin.clear();
+            cin.clear();
 
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            continue;
+        }
+        else if (N == 1 && M == 1) {
+            cout << "1 1 is an invalid input: ";
+            continue;
+        }
+        else if (N <= 0 || M <= 0) {
+            cout << "Inputs less than or equal 0 are invalid: ";
+            continue;
+        }
+        else {
+            valid = true;
+
+        }
     }
+
+
+    // while (!(cin >> N >> M)) {
+    //     cout << "Not an Int, please enter int: ";
+    //
+    //     cin.clear();
+    //
+    //     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    // }
 
     //
     // while (!valid) {

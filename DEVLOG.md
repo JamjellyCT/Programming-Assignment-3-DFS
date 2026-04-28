@@ -116,4 +116,17 @@ Inputs tested like e e, e, 3 e, e 3, 3 3e, 3 3e3, etc.
 Now doesn't cause an error when user inputs an letter but the 
 validation are still seperate so I need to combine them still.
 
+### Session 9
+**Date:** 2026-04-27
+**Task worked on:**
+Combined validation checkers under one while loop. 
+**Bugs or Issues**
+Previous validation checker accepted negatives as valid inputs.
+I think I covered possible issue / error causing inputs. 
+Inputs such as 3 3e pass as the first two values are ints but since the program runs fine I'll intentionally leave it.
+**Tests**
+Inputs such as: 5 5, 5 e5, e5 5, -4 -2, 3 4-, -4 2, 2 2e
+**Fixed or Improved**
+Validation for inputs now identifies negatives as invalid inputs. Validation checkers were to seperate while loops
+Now validation checkers are within only one loop.
 
