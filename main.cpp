@@ -140,22 +140,12 @@ bool isValid(vector<vector<bool>>& visited, int r, int c, const vector<vector<in
 
 bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& visited, vector<vector<int>>& parent_r,
     vector<vector<int>>& parent_c, int exit_r, int exit_c) {
-    // Your code here
     //Mark current cell as visited
     visited[r][c] = true;
 
-    //Test Print
-    //Print the element at the cell
-    //cout << maze[r][c] << ", " << r << " " << c << ", ";
-
-    //old
-    // if (maze[r][c] == maze[exit_r][exit_c]) {
-    //     return true;
-    // }
 
     //Checks if at exit
     if (r == exit_r && c == exit_c) {
-        //Test print
         cout << "E found ";
         return true;
     }
@@ -207,10 +197,12 @@ int main() {
             continue;
         }
         else if (N == 1 && M == 1) {
+            //Edge case input 1 1
             cout << "1 1 is an invalid input: ";
             continue;
         }
         else if (N <= 0 || M <= 0) {
+            //Edge case M or N equal 0
             cout << "Inputs less than or equal 0 are invalid: ";
             continue;
         }
@@ -221,49 +213,6 @@ int main() {
     }
 
 
-    // while (!(cin >> N >> M)) {
-    //     cout << "Not an Int, please enter int: ";
-    //
-    //     cin.clear();
-    //
-    //     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    // }
-
-    //
-    // while (!valid) {
-    //     cout << "Enter maze dimensions N M: ";
-    //     cin >> N >> M;
-    //
-    //     if (N == 1 && M == 1) {
-    //         cout << "1 1 is an invalid input"<< endl;
-    //         continue;
-    //     }
-    //     else if (N == 0 || M == 0) {
-    //         cout << "0 is an invalid input"<< endl;
-    //         continue;
-    //     }
-    //     else {
-    //         valid = true;
-    //
-    //     }
-    //
-    //     //valid = true;
-    // }
-
-
-    //Edge case input 1 1
-    // if (N == 1 && M == 1) {
-    //     cout << "1 1 is an invalid input"<< endl;
-    //     cout << "Enter maze dimensions N M: ";
-    //     cin >> N >> M;
-    // }
-
-    //Edge case M or N equal 0
-    // if (N == 0 || M == 0) {
-    //     cout << "0 is an invalid input"<< endl;
-    //     cout << "Enter maze dimensions N M: ";
-    //     cin >> N >> M;
-    // }
 
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
@@ -295,9 +244,6 @@ int main() {
     // ------------------------------------------------------
      bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
     cout << endl;
-    //incorrectly printing false when true
-    //cout << found << endl;
-    //cout << endl;
 
 
     // ------------------------------------------------------

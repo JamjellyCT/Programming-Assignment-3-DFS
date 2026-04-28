@@ -130,3 +130,14 @@ Inputs such as: 5 5, 5 e5, e5 5, -4 -2, 3 4-, -4 2, 2 2e
 Validation for inputs now identifies negatives as invalid inputs. Validation checkers were to seperate while loops
 Now validation checkers are within only one loop.
 
+### Session 10
+**Date:** 2026-04-28
+**Task worked on:**
+Cleaned comments
+**Bugs or Issues**
+If there are bugs or issues, they are bug or issues I am unware of.
+**Tests**
+None.
+**Fixed or Improved**
+Removed the commented out test code / code with errors.
+
